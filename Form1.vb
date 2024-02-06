@@ -8,7 +8,7 @@ Imports System.Text.RegularExpressions
 
 Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox("this will take a minute or two")
+        MsgBox("this will take a minute to two")
         ' Get the latest Amature radio database from the FCC
         Dim extractPath As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
         Dim remoteUri As String = "https://data.fcc.gov/download/pub/uls/complete/l_amat.zip"
@@ -31,11 +31,15 @@ Public Class Form1
         If File.Exists((extractPath & "\LA.dat")) Then Kill(extractPath & "\LA.dat")
         If File.Exists((extractPath & "\SC.dat")) Then Kill(extractPath & "\SC.dat")
         If File.Exists((extractPath & "\SF.dat")) Then Kill(extractPath & "\SF.dat")
-        Dim zipPath As String = "l_amat.zip"
-        ZipFile.ExtractToDirectory(zipPath, extractPath)
+
+        ZipFile.ExtractToDirectory(fileName, extractPath)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+
+
+        MsgBox("")
+
         Dim readfilename As String = "EN.dat" 'text data file to be read by StreamReader. The file must be in the same folder at this application.
         Dim textreader As New StreamReader(readfilename, Encoding.Default) 'object to read the text data file
         Dim stringline As String = ""
@@ -145,6 +149,10 @@ Public Class Form1
 errormsxbox:
         MsgBox("please click on a row before clicking on the 'Copy Selected Row' button")
 allgood:
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
+
     End Sub
 
 
