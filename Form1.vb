@@ -33,12 +33,10 @@ Public Class Form1
         If File.Exists((extractPath & "\SF.dat")) Then Kill(extractPath & "\SF.dat")
 
         ZipFile.ExtractToDirectory(fileName, extractPath)
+        MsgBox("Update is complete.")
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-
-
-        MsgBox("")
 
         Dim readfilename As String = "EN.dat" 'text data file to be read by StreamReader. The file must be in the same folder at this application.
         Dim textreader As New StreamReader(readfilename, Encoding.Default) 'object to read the text data file
