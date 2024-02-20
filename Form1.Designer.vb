@@ -43,6 +43,7 @@ Partial Class Form1
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -61,11 +62,11 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(17, 42)
+        Me.Button1.Location = New System.Drawing.Point(17, 69)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(195, 75)
+        Me.Button1.Size = New System.Drawing.Size(86, 40)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Update from FCC Database"
+        Me.Button1.Text = "Get"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'DataGridView1
@@ -246,11 +247,21 @@ Partial Class Form1
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 118
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(12, 12)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 27)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Get"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 12)
+        Me.Label7.Location = New System.Drawing.Point(12, 39)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(180, 27)
         Me.Label7.TabIndex = 16
@@ -360,6 +371,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1746, 818)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.DataGridView1)
@@ -386,6 +398,7 @@ Partial Class Form1
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Label4 As Label
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
